@@ -1,0 +1,94 @@
+header{
+  background-color: white;
+  margin-bottom: 50px;
+
+}
+
+body{
+background-color: lightgrey;
+}
+header button{
+  background-color: aqua;
+  color:white;
+
+}
+
+
+
+.navbar-light .navbar-nav .nav-link {
+  color: red;
+}
+
+.img-main{
+  height: 200px;
+  width: 200px;
+
+}
+
+
+
+.nav-image{
+height: 200px;
+width: 200px;
+
+}
+
+
+
+
+.box{
+
+background-color: lightblue;
+
+}
+
+
+.container a {
+  color:black;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+h1{
+  padding: 20px;
+  color: red;
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+
+
+
+.navbar-brand{
+
+  font-weight: bold;
+  padding: 10px;
+  background-color: red;
+}
+
+@media (max-width: 1200px) {
+  body {
+    background: blue;
+  } 
+}
+
+
+
+@media (max-width: 600px) {
+  body {
+    background: purple;
+  } 
+}
+
+
+
+
+
