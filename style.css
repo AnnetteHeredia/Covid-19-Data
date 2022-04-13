@@ -13,6 +13,9 @@ header button{
 
 }
 
+/* Div styling */
+
+.col-6column
 
 /* navbar styling*/
 a.navbar-brand{
@@ -76,7 +79,21 @@ background-color: lightblue;
 }
 
 
+/* table text adjustments*/
 
+th, td {
+    border-bottom: 1px solid #ddd;
+
+  }
+
+  th {
+    background-color: rgb(81, 175, 160);
+    color: white;
+  }
+
+th { 
+    text-align: left;
+}
 
 
 
