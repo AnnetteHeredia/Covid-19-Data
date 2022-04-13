@@ -8,9 +8,36 @@ body{
 background-color: lightgrey;
 }
 header button{
-  background-color: aqua;
+  background-color: rgb(236, 44, 10);
   color:white;
 
+}
+
+
+/* navbar styling*/
+a.navbar-brand{
+  margin-left: 10px;
+  padding: 10px;
+  background-color: rgb(189, 21, 9);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px;
+}
+
+/* navbar styling*/
+.navbar{
+  padding-top:0px;
+  padding-bottom: 0px;
+  padding-right:40px;
+}
+
+.nav-item.dropdown.show {
+  background-color: #ddd;
+  padding-right:100px;
+}
+
+.dropdown-menu {
+  margin: 30;
+  background-color: rgb(255, 255, 255);
 }
 
 
@@ -76,7 +103,7 @@ h1{
 
 @media (max-width: 1200px) {
   body {
-    background: blue;
+    background: rgb(255, 255, 255);
   } 
 }
 
