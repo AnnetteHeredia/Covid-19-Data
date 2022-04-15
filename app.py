@@ -3,19 +3,10 @@ import sqlite3
 import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
-from sqlalchemy import create_engine, func, MetaData
+from sqlalchemy import create_engine, func
 import json
 
 
-
-# engine = create_engine("sqlite:///./Data/COVID_Data.db")
-
-# Base = automap_base()
-
-# Base.prepare(engine, reflect=True)
-# print(Base.classes.keys())
-# World = Base.classes.world_data
-# session = Session(engine)
 
 app =Flask(__name__)
 
