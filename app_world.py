@@ -32,7 +32,7 @@ def world_leaf_api():
     cursor.execute("SELECT location, total_cases, total_deaths FROM world_data WHERE date = \"2022-03-01\" ")
     results = cursor.fetchall()
 
-    # print(results)
+    # print(results[0][0])
 
     conn.close()
 
