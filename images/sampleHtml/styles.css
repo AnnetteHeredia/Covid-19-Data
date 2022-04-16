@@ -78,8 +78,13 @@ background-color: lightblue;
   cursor: pointer;
 }
 
-
-
+.page-title{
+  text-align: center;
+}
+p {
+  /* Center horizontally*/
+  text-align: center;
+}
 
 th, td {
     border-bottom: 1px solid #ddd;

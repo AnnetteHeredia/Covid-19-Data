@@ -182,4 +182,7 @@
     padding: 10px;
     margin: 0px;
   }
-  
+  p {
+    /* Center horizontally*/
+    text-align: center;
+  }
