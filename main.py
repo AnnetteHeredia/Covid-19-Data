@@ -17,13 +17,17 @@ import datetime
 #dEcribe where the application is being run from
 app = Flask(__name__)
 
+database_path = "Data/COVID_Data.db"
+
+engine = create_engine(f"sqlite:///{database_path}")
+
 
 #trick for annotation a finctiionality to  in Python add  @  it tells it the route "/"
 @app.route("/")
 
 #simple function that returns this statement
 def index():
-    return "Welcome to Get Leaf!"
+    return render_template('./index.html')
 
 #telling the route and that it need to run this function
 @app.route("/about")
@@ -48,11 +52,27 @@ def getTotalDeathByAlltate():
         {
             'status' : 'success',
             'results' :{
-                'cases' : cases_data,
-                'deaths' : deaths_data
+                'cases' : [ case_data.values() for case_data in cases_data ],
+                'deaths' : [ death_data.values() for death_data in deaths_data ]
             }
         })
 
+@app.route('/getTotalDeathByOnetate', methods=['GET'])
+def getTotalDeathByOneState():
+    state = request.args.get('state') or ''
+
+    case_data = engine.execute("SELECT tot_cases, state FROM usa_data WHERE state = \"" + state + "\" ORDER BY submission_date DESC LIMIT 1;")
+    death_data = engine.execute("SELECT tot_death, state FROM usa_data WHERE state =\"" + state + "\" ORDER BY submission_date DESC LIMIT 1;")
+
+    return jsonify(
+        {
+            'status' : 'success',
+            'result' :{
+                'cases' : [ cd.values() for cd in case_data ],
+                'deaths' : [ dd.values() for dd in death_data ],
+                'state': state
+            }
+        })
 
 #last piece we need, useful of launching from gitbash it will be name but if running from cloud service it may be "main"
 if __name__ == "__main__":
