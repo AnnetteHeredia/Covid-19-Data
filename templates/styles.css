@@ -26,7 +26,7 @@ a.navbar-brand{
   font-size: 25px;
 }
 
-/
+
 .navbar{
   padding-top:0px;
   padding-bottom: 0px;
@@ -46,7 +46,7 @@ a.navbar-brand{
 
 
 .navbar-light .navbar-nav .nav-link {
-  color: red;
+  color: white;
 }
 
 .img-main{
