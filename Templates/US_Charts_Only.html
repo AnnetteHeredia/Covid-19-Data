@@ -18,7 +18,7 @@
     <!-- Placeholder for Custom Javascript-->
     <script src="{{ url_for('static', filename='js/Us_Charts.js') }}"></script>
 </head>
-<body onload="loadPage(); onclick=getCharts({{json_data}});">
+<body onload="loadPage({{locations}}); onclick=getCharts({{json_data}});">
     <form action={{url_for('query_usa')}} method="POST">
         <select id="State_Drop_Down_tag" name="selected_state"></select>
         Start Date: <input name="start_date"></text>
@@ -34,9 +34,9 @@
     Total Deaths: <input type="checkbox" id="total_Deaths" value="True" onchange="getCharts({{json_data}});">
     New Deaths: <input type="checkbox" id="new_Deaths" value="True" onchange="getCharts({{json_data}});">
     <p>SUMMARY TABLE FOR SELECTED DATES:</p>
-    <div id="summary_data">
-        
-    </div>
-    <button onclick="testElement({{json_data}});"></button>
+    <div id="summary_data"></div>
+
+    <button onclick="testElement({{json_data}});">TEST JAVASCRIPT FUNCTION (SEE CONSOLE)</button>
+    <div id="test_result"></div>
 </body>
 </html>

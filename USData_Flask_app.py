@@ -16,12 +16,20 @@ engine = create_engine("sqlite:///./Data/COVID_Data.db")
 #Create Flask Routes
 @app.route("/")
 def home(*args):
+    #query locations for dropdown
+    location_query = engine.execute('SELECT DISTINCT(state) FROM usa_data ORDER BY state ASC').fetchall()
+    locations = []
+    for loc in location_query:
+        locations.append(loc[0])
+    print(locations)
+
+    #populate the JSON string if already queried, otherwise leave empty
     if len(args) > 0:
         print(f"ARGS ------ {args[0]}")
         json_string = args[0]
     else:
         json_string = {}
-    return render_template("US_Charts_Only.html", json_data = json_string)
+    return render_template("US_Charts_Only.html",locations = locations, json_data = json_string)
     
 
 @app.route("/query_USA", methods=['POST','GET'])

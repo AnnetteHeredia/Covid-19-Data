@@ -1,10 +1,7 @@
-//Load the available selections on page load
-statesList = Array("AL","AK","AR", "AS","CA","CO","CT","DE","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY");
-
-function loadPage(){
+function loadPage(locations){
     //populate states list into state dropdown
-    for (i=0; i<statesList.length; i++){
-        state = statesList[i];
+    for (i=0; i<locations.length; i++){
+        state = locations[i];
         d3.select("#State_Drop_Down_tag").append('option').attr('value', state).text(state);
     }
 }
