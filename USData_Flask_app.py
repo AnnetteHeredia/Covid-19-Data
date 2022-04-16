@@ -33,6 +33,7 @@ def query_usa():
 
     #get the parameters to run queries
     date_start_dt = datetime.datetime.strptime(start_date, '%m/%d/%Y').date()
+    date_end_dt = datetime.datetime.strptime(end_date, '%m/%d/%Y').date()
     state_select = selected_state
 
     #create placeholders for data
@@ -41,21 +42,31 @@ def query_usa():
     state_tot_deaths = []
     state_new_death = []
 
+    #due to SQL storing dates as string literals, create a list of dates to search from the range
+    date_list = []
+    date_delta = date_end_dt - date_start_dt
+
+    for i in range(date_delta.days + 1):
+        day = date_start_dt + datetime.timedelta(days=i)
+        date_list.append(day.strftime("%m/%d/%Y"))
+    date_list = tuple(date_list)
+    print(date_list)
+
     #run queries for data
     #total cases by day
-    state_cases_query = engine.execute(f"SELECT tot_cases FROM usa_data WHERE state = '{state_select}' AND submission_date BETWEEN '{start_date}' AND '{end_date}'").fetchall()
+    state_cases_query = engine.execute(f"SELECT tot_cases FROM usa_data WHERE state = '{state_select}' AND submission_date IN {date_list} ORDER BY submission_date ASC").fetchall()
     for state in state_cases_query:
         state_cases.append(state[0])
     #new cases by day
-    state_newcases_query = engine.execute(f"SELECT new_case FROM usa_data WHERE state = '{state_select}' AND submission_date BETWEEN '{start_date}' AND '{end_date}'").fetchall()
+    state_newcases_query = engine.execute(f"SELECT new_case FROM usa_data WHERE state = '{state_select}' AND submission_date IN {date_list} ORDER BY submission_date ASC").fetchall()
     for state in state_newcases_query:
         state_new.append(state[0])
     #total deaths by day
-    state_totdeaths_query = engine.execute(f"SELECT tot_death FROM usa_data WHERE state = '{state_select}' AND submission_date BETWEEN '{start_date}' AND '{end_date}'").fetchall()
+    state_totdeaths_query = engine.execute(f"SELECT tot_death FROM usa_data WHERE state = '{state_select}' AND submission_date IN {date_list} ORDER BY submission_date ASC").fetchall()
     for state in state_totdeaths_query:
         state_tot_deaths.append(state[0])
     #new deaths by day
-    state_newdeaths_query = engine.execute(f"SELECT new_death FROM usa_data WHERE state = '{state_select}' AND submission_date BETWEEN '{start_date}' AND '{end_date}'").fetchall()
+    state_newdeaths_query = engine.execute(f"SELECT new_death FROM usa_data WHERE state = '{state_select}' AND submission_date IN {date_list} ORDER BY submission_date ASC").fetchall()
     for state in state_newdeaths_query:
         state_new_death.append(state[0])
 
