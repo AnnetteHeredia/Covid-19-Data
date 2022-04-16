@@ -33,7 +33,10 @@
     New Cases: <input type="checkbox" id="new_Cases" value="True" onchange="getCharts({{json_data}});">
     Total Deaths: <input type="checkbox" id="total_Deaths" value="True" onchange="getCharts({{json_data}});">
     New Deaths: <input type="checkbox" id="new_Deaths" value="True" onchange="getCharts({{json_data}});">
-
-    
+    <p>SUMMARY TABLE FOR SELECTED DATES:</p>
+    <div id="summary_data">
+        
+    </div>
+    <button onclick="testElement({{json_data}});"></button>
 </body>
 </html>
