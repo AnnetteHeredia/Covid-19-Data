@@ -1,5 +1,4 @@
-/* Giving the body the specified background color, adding font sizes for the h1 and h3 elements we'll be using */
-body {
+
     background-image: url("COVIDsTATS.JPG");
     background-size: cover;
     background-position: center;
@@ -69,14 +68,14 @@ body {
     text-align: center;
     color: white;
     font-size: 30px;
-    font-family: Brush Script MT;
+    font-family: ;
   }
   
   h4 {
     text-align: center;
     color: white;
     font-size: 40px;
-    font-family: Brush Script MT;
+    font-family: ;
   
   }
   
@@ -85,7 +84,7 @@ body {
     color: white;
     text-shadow: 2px 2px #000000;
     font-size: 40px;
-    font-family: Brush Script MT;
+    font-family: ;
   
   }
   
@@ -133,7 +132,7 @@ body {
     background-image: url("Biohazard_symbol.svg.png");
     background-repeat: no-repeat;
     background-size: cover;
-    border: whitesmoke;
+    border: white;
     border-width: 5pt;
     border-style: inset;
     position: center;
@@ -143,16 +142,7 @@ body {
     margin-top: 20px;
   }
   
-  #recipe-list {
-    padding: 20px;
-    margin-left: 10%;
-    margin-right: 10%;
-    text-align: left;
-    text-overflow: ellipsis;
-    color: rgb(226, 223, 223);
-    font-size: 16pt ;
-    border-radius: 20px;
-  }
+  
   
   #panel-title {
     padding:
@@ -162,23 +152,9 @@ body {
       bottom 10px
   }
   
-  #cocktail-search{
-    background-image: url("../Images/cocktail_bg.png");
-    background-repeat:space;
-    background-size: cover;
-    padding-top: 20px;
-    height: 300px; 
-    width: 100%;
-    border-radius: 15px;
-  }
+ 
   
-  #cocktail-search-overlay{
-    background-color: #ffffff;
-    opacity: 70%;
-    padding-top: 20px;
-  }
-  
-  #bar{
+  #holder{
     margin-right: ;
     margin-left: 20px;
   }
