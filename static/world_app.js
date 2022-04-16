@@ -10,7 +10,7 @@ window.onload = function(){
 		.fitBounds(world);
     d3.json('/allgeojson').then(function(json) {
       // For console log to see the geojson
-    var test = d3.json('/allgeojson')
+    var test = d3.json('/world_leaf_api')
 		L.geoJson(json,{
 		    clickable:true,
 		    style: function(item){
@@ -93,7 +93,7 @@ window.onload = function(){
 
 		    }
 		}).addTo(map);
-    // console.log(test)
+    console.log(test[0][0])
 	});
 
 }

@@ -29,7 +29,7 @@ def world_leaf_api():
 
     conn = sqlite3.connect(f'Data/COVID_Data.db') 
     cursor = conn.cursor()
-    cursor.execute("SELECT date, location, total_cases, total_deaths FROM world_data WHERE date = \"2022-03-01\" ")
+    cursor.execute("SELECT location, total_cases, total_deaths FROM world_data WHERE date = \"2022-03-01\" ")
     results = cursor.fetchall()
 
     # print(results)
