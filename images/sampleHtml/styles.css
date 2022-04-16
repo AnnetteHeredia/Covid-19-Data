@@ -1,0 +1,138 @@
+header{
+  background-color: white;
+  margin-bottom: 50px;
+
+}
+
+body{
+background-color: lightgrey;
+}
+header button{
+  background-color: rgb(236, 44, 10);
+  color:white;
+
+}
+
+
+
+.col-6column
+
+
+a.navbar-brand{
+  margin-left: 10px;
+  padding: 10px;
+  background-color: rgb(189, 21, 9);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px;
+}
+
+/
+.navbar{
+  padding-top:0px;
+  padding-bottom: 0px;
+  padding-right:40px;
+}
+
+.nav-item.dropdown.show {
+  background-color: #ddd;
+  padding-right:100px;
+}
+
+.dropdown-menu {
+  margin: 30;
+  background-color: rgb(255, 255, 255);
+}
+
+
+
+.navbar-light .navbar-nav .nav-link {
+  color: red;
+}
+
+.img-main{
+  height: 200px;
+  width: 200px;
+
+}
+
+
+
+.nav-image{
+height: 200px;
+width: 200px;
+
+}
+
+
+
+
+.box{
+
+background-color: lightblue;
+
+}
+
+
+.container a {
+  color:black;
+  cursor: pointer;
+}
+
+
+
+
+th, td {
+    border-bottom: 1px solid #ddd;
+
+  }
+
+  th {
+    background-color: rgb(81, 175, 160);
+    color: white;
+  }
+
+th { 
+    text-align: left;
+}
+
+
+
+
+
+
+
+h1{
+  padding: 20px;
+  color: red;
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+
+
+
+.navbar-brand{
+
+  font-weight: bold;
+  padding: 10px;
+  background-color: red;
+}
+
+@media (max-width: 1200px) {
+  body {
+    background: rgb(255, 255, 255);
+  } 
+}
+
+
+
+@media (max-width: 600px) {
+  body {
+    background: purple;
+  } 
+}
+
+
+
+
+
