@@ -29,15 +29,14 @@ def world_leaf_api():
 
     conn = sqlite3.connect(f'Data/COVID_Data.db') 
     cursor = conn.cursor()
-    cursor.execute("SELECT * FROM world_data")
+    cursor.execute("SELECT date, location, total_cases, total_deaths FROM world_data WHERE date = \"2022-03-01\" ")
     results = cursor.fetchall()
 
     # print(results)
-    for result in results:
-        print(result[0])
+
     conn.close()
 
-    return (f'Hello World <br>')
+    return (jsonify(results))
 
 # ROute to world_leaf page
 @app.route("/world_leaf")
