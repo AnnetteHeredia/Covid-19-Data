@@ -1,109 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-
-    <title>World COVID Data(we can change this.)</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>World Covid 19 Statistics</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.1/leaflet.css" />
+  <link rel="stylesheet" href="leaflet.draw.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.1/leaflet.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.4.4/d3.min.js"></script>
+  <script src="/static/world_app.js"></script>
+  <!-- CSS -->
+  <script src="/static/leaflet.label-src.js"></script>  
+  <link rel="stylesheet" type="text/css" href="../static/style.css">
+  <link rel="stylesheet" type="text/css" href="../static/main.css">
+ 
 </head>
 
 <body>
 
-    <header>
+  <!-- NAVIGATION control>-->
+  <div class="container">
+    <div class="row">
+      <div class="col-4 divtop">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+          <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-            <a class="navbar-brand" href="usData.html">United States Covid Numbers</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Navigation
-                        </a>
-
-
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="index.html">Home</a>
-                            <a class="dropdown-item" href="worldData.html">World COVID Numbers</a>
-                            <a class="dropdown-item" href="usData.html">United States COVID Numbers</a>
-                            
-                        </div>
-                        
-                    </li>
-                </ul>
-
-            </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="worldData.html">World COVID Data</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="usinfo.html">United States Covid Data</a>
+            </li>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="index.html">Home</a>
+                  <a class="dropdown-item" href="worldData.html">World Map</a>
+                  <a class="dropdown-item" href="usinfo.html">United States COVID Numbers</a>
+                  
+              </div>
+          </div>
         </nav>
-    </header>
+      </div>
+    </div>
+  </div>
+ <!-- <End OF nav controls> -->
 
+  <div class="row"><br>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">
+      </div>
 
-    <div class="container-fluid">
-
-        <div class="row">
-
-            <div class=" col-12 column">
-                <h1>Leaflet Map Goes Here!</h1>
-                <p>Column</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum enim sapiente rerum sit autem
-                    praesentium consequatur minus consequuntur provident quas? Molestiae consequatur sunt quas
-                    delectus
-                    ea nemo vero natus. Magni.</p>
-                <br>
-                <br>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe odit est perferendis consequatur.
-                    Reprehenderit culpa quaerat accusantium? Voluptas natus rerum laboriosam delectus nam? Tempora
-                    debitis, assumenda maiores hic et aperiam.</p>
-
-
-
-
-                    <div class="card bg-dark text-white">
-                        <img class="card-img" src="/usa_physical_map.webp" alt="Card image">
-                        <div class="card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text">Last updated 3 mins ago</p>
-                        </div>
-                    </div>
-
-
-
-            </div>
-
-
-            
-            </div>
+      <div class="col-md-8">
+        <div class="logo">
+          <img src="../images/COVIDsTATS.png" style="width: 100%; height: auto" alt="COVID">
         </div>
+      </div>
+      <div class="col-md-2">
+      </div>
+    </div>
+    <div class="row"><br></div>
+    <div class="row">
+      <!-- <div class="col-md-12"> -->
+      <div class="col-md-3">
+      </div>
+
+    <div class="page-title">
+        <div align="center"></div>
+            <h1>World Covid Data</h1>
+            <br>
+            <br>
     </div>
 
+      <!-- This is were our leaflet map will go-->
+      <br>
+      <hr>
+      <div class="leaflet_map_container" id="map">
+        
+             <p>Leaflet map place holder</p>
+      </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
-        crossorigin="anonymous">
 
+
+
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div align="center">
+          <div class="container-fluid">
+            <div class="panel panel-primary" id="panel-id">
+              <div class="panel-heading">
+                <h3 id="panel-title">Covid </h3>
+              </div>
+              <div id="covid" class="panel-body"></div>
+
+              <div id="covid-table"></div>
+              <div>
+                <ul id="covid-list"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div align="center">
+          <div class="container fluid">
+            <div id="holder"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+ 
+ 
+
+ 
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

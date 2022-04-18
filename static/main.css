@@ -1,10 +1,4 @@
 
-    background-image: url("COVIDsTATS.JPG");
-    background-size: cover;
-    background-position: center;
-    margin: 0px;
-    
-  }
   img {
     border-radius: 8px;
     display: block;
@@ -125,11 +119,11 @@
   }
   
   .leaflet-popup-content-wrapper {
-    background-image: url("Biohazard_symbol.svg.png")
+    background-image: url("../images/Biohazard_symbol.svg.png")
   }
   
   #panel-id {
-    background-image: url("Biohazard_symbol.svg.png");
+    background-image: url("../images/Biohazard_symbol.svg.png");
     background-repeat: no-repeat;
     background-size: cover;
     border: white;
@@ -182,4 +176,7 @@
     padding: 10px;
     margin: 0px;
   }
-  
+  p {
+    /* Center horizontally*/
+    text-align: center;
+  }

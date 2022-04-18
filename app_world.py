@@ -32,7 +32,7 @@ def world_leaf_api():
     cursor.execute("SELECT location, total_cases, total_deaths FROM world_data WHERE date = \"2022-03-01\" ")
     results = cursor.fetchall()
 
-    # print(results)
+    # print(results[0][0])
 
     conn.close()
 
@@ -41,7 +41,7 @@ def world_leaf_api():
 # ROute to world_leaf page
 @app.route("/world_leaf")
 def world_leaf():
-    return render_template("world.html")
+    return render_template("worldData.html")
 
 @app.route('/allgeojson')
 def allgeojson():
