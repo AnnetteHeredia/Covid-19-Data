@@ -39,7 +39,7 @@ def world_leaf_api():
     return (jsonify(results))
 
 # ROute to world_leaf page
-@app.route("/world_leaf")
+@app.route("/worldData")
 def world_leaf():
     return render_template("worldData.html")
 

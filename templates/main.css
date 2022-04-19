@@ -118,9 +118,9 @@
     max-height: 150px;
   }
   
-  .leaflet-popup-content-wrapper {
+  /* .leaflet-popup-content-wrapper {
     background-image: url("../images/Biohazard_symbol.svg.png")
-  }
+  } */
   
   #panel-id {
     background-image: url("../images/Biohazard_symbol.svg.png");
@@ -179,4 +179,8 @@
   p {
     /* Center horizontally*/
     text-align: center;
+  }
+
+  #map { 
+    height: 600px; 
   }

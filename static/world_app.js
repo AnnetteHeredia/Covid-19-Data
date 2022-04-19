@@ -11,7 +11,7 @@ window.onload = function () {
   ];
   var allowedCountries = {};
   var map = L.map("map", { minZoom: 2 }).fitBounds(world);
-
+// state_lat_long.geojson
   d3.json("/allgeojson").then(function (json) {
     d3.json("/world_leaf_api").then(function (data) {
       // For console log to see the geojson
@@ -58,7 +58,6 @@ window.onload = function () {
           });
         },
         onEachFeature: function (feature, layer) {
-        //   var search = 0;
           // Get name of the country
           var name = feature.properties.name;
           // Get the first cordinate ... Not sure if I need this
@@ -85,9 +84,9 @@ window.onload = function () {
             layer.setStyle({
               fillColor: ctxFillColor(),
             });
-			layer.bindPopup('<p>You are here '+ name + '<br>' +
+			layer.bindPopup('You are here '+ name + '<br>' +
 			 'Total Cases: ' + data[country][1]  + '<br>' +
-			 'Total Deaths: ' + data[country][2] + '</p>');
+			 'Total Deaths: ' + data[country][2]);
           });
 
           layer.on("mouseover", function () {
@@ -103,22 +102,11 @@ window.onload = function () {
               fillColor: ctxFillColor(),
             });
           });
-          // This will add a pop up to the country that you click on.
-          // TODO: Display stats
           console.log(typeof data);
 
 		console.log()
-        //   layer.bindPopup(
-        //     "County: " +
-        //       feature.properties.name +
-        //       "<br>" 
-        //   );
         },
       }).addTo(map);
-
-      // console.log(typeof test2);
-      // var json = JSON.stringify(test);
-      // console.log(data[0]);
     });
   });
 };
