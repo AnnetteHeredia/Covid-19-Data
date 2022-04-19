@@ -45,20 +45,22 @@ Placeholder
 
 # Load
 
- Placeholder
+Placeholder
  
- # Deploy
+# Deploy
  
- Placeholder
+Placeholder
  
- # Visualizations
+# Visualizations
  
- Placeholder
+Placeholder
  
- ## HTML
+## HTML
  
- Placeholder
- 
+Placeholder
+
+![home?](images/covid19html.PNG)
+
 ## Run Flask
 
 Placeholder
