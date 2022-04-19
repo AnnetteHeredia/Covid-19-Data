@@ -13,12 +13,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
 
   <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <link rel="stylesheet" type="text/css" href="main.css">
- 
+  <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="static/css/main.css">
+
+  <!-- Javascript -->
+  <script src="{{ url_for('static', filename='js/index.js') }}"></script>
 </head>
 
-<body>
+<body onload="loadPage({{states}},{{continents}},{{countries}});">
 
   <!-- NAVIGATION control>-->
   <div class="container">
@@ -33,20 +35,8 @@
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="/">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="worldData.html">World COVID Data</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="usinfo.html">United States Covid Data</a>
-            </li>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="index.html">Home</a>
-                  <a class="dropdown-item" href="worldMap.html">World Map</a>
-                  <a class="dropdown-item" href="usinfo.html">United States COVID Numbers</a>
-                  
-              </div>
           </div>
         </nav>
       </div>
@@ -63,7 +53,7 @@
 
       <div class="col-md-8">
         <div class="logo">
-          <img src="../images/COVIDsTATS.png" style="width: 100%; height: auto" alt="COVID">
+          <img src="../static/images/COVIDsTATS.png" style="width: 100%; height: auto" alt="COVID">
         </div>
       </div>
       <div class="col-md-2">
@@ -85,13 +75,28 @@
           <div class="container-fluid">
             <div class="panel panel-primary" id="panel-id">
               <div class="panel-heading">
-                <h3 id="panel-title">Covid </h3>
+                <h3 id="panel-title">WORLD OWID DATA</h3>
               </div>
               <div id="covid" class="panel-body"></div>
 
               <div id="covid-table"></div>
               <div>
-                <ul id="covid-list"></ul>
+                <form action={{url_for('query_Continent')}} method="POST">
+                  <h2>Search by Continent</h2>
+                  <select id="Continents_Drop_Down_tag" name="selected_continent"></select></br>
+                  Start Date: <input name="start_date_continent"></text></br>
+                  End Date: <input name="end_date_continent"></text></br>
+                  <button type="submit" href="/query_Continent">GET RESULTS!</button>
+                </form>
+              </div>
+              <div>
+                <form action={{url_for('query_Country')}} method="POST">
+                  <h2>Search by Country</h2>
+                  <select id="Country_Drop_Down_tag" name="selected_country"></select></br>
+                  Start Date: <input name="start_date_country"></text></br>
+                  End Date: <input name="end_date_country"></text></br>
+                  <button type="submit" href="/query_Country">GET RESULTS!</button>
+                </form>
               </div>
             </div>
           </div>
@@ -100,20 +105,29 @@
 
       <div class="col-md-6">
         <div align="center">
-          <div class="container fluid">
-            <div id="holder"></div>
+          <div class="container-fluid">
+            <div class="panel panel-primary" id="panel-id">
+              <div class="panel-heading">
+                <h3 id="panel-title">USA CDC DATA</h3>
+              </div>
+              <div id="covid" class="panel-body"></div>
+
+              <div></div>
+              <div>
+                <form action={{url_for('query_USA')}} method="POST">
+                  State: <select id="State_Drop_Down_tag" name="selected_state"></select></br>
+                  Start Date: <input name="start_date"></text></br>
+                  End Date: <input name="end_date"></text></br>
+                  <button type="submit" href="/query_USA">GET RESULTS!</button>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
   
-
-
- 
- 
-
- 
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">

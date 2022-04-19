@@ -1,0 +1,566 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.6807365,32.6010112 ]
+    },
+    "properties": {
+    "State":"AL",
+    "City":"Alabama"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -158.7750198,61.3025006 ]
+    },
+    "properties": {
+    "State":"AK",
+    "City":"Alaska"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -111.930907,34.1682185 ]
+    },
+    "properties": {
+    "State":"AZ",
+    "City":"Arizona"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.1313784,34.7519275 ]
+    },
+    "properties": {
+    "State":"AR",
+    "City":"Arkansas"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -119.2704153,37.2718745 ]
+    },
+    "properties": {
+    "State":"CA",
+    "City":"California"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -105.550567,38.9979339 ]
+    },
+    "properties": {
+    "State":"CO",
+    "City":"Colorado"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -72.757507,41.5187835 ]
+    },
+    "properties": {
+    "State":"CT",
+    "City":"Connecticut"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.4189206,39.145251 ]
+    },
+    "properties": {
+    "State":"DE",
+    "City":"Delaware"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.0145666,38.8993487 ]
+    },
+    "properties": {
+    "State":"DC",
+    "City":"District of Columbia"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.8330166,27.9757279 ]
+    },
+    "properties": {
+    "State":"FL",
+    "City":"Florida"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.2229757,32.6781248 ]
+    },
+    "properties": {
+    "State":"GA",
+    "City":"Georgia"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -157.505,20.46 ]
+    },
+    "properties": {
+    "State":"HI",
+    "City":"Hawaii"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -114.1424303,45.4945756 ]
+    },
+    "properties": {
+    "State":"ID",
+    "City":"Idaho"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.504139,39.739318 ]
+    },
+    "properties": {
+    "State":"IL",
+    "City":"Illinois"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.441277,39.7662195 ]
+    },
+    "properties": {
+    "State":"IN",
+    "City":"Indiana"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.389798,41.9383166 ]
+    },
+    "properties": {
+    "State":"IA",
+    "City":"Iowa"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -98.3200779,38.4987789 ]
+    },
+    "properties": {
+    "State":"KS",
+    "City":"Kansas"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.7682399,37.8222935 ]
+    },
+    "properties": {
+    "State":"KY",
+    "City":"Kentucky"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -91.4299097,30.9733766 ]
+    },
+    "properties": {
+    "State":"LA",
+    "City":"Louisiana"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -69.0148656,45.2185133 ]
+    },
+    "properties": {
+    "State":"ME",
+    "City":"Maine"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.2684162,38.8063524 ]
+    },
+    "properties": {
+    "State":"MD",
+    "City":"Maryland"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.718067,42.0629398 ]
+    },
+    "properties": {
+    "State":"MA",
+    "City":"Massachusetts"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.4158049,44.9435598 ]
+    },
+    "properties": {
+    "State":"MI",
+    "City":"Michigan"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.3655146,46.4418595 ]
+    },
+    "properties": {
+    "State":"MN",
+    "City":"Minnesota"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.8772196,32.5851062 ]
+    },
+    "properties": {
+    "State":"MS",
+    "City":"Mississippi"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.437099,38.3046615 ]
+    },
+    "properties": {
+    "State":"MO",
+    "City":"Missouri"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -110.044783,46.6797995 ]
+    },
+    "properties": {
+    "State":"MT",
+    "City":"Montana"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -99.680902,41.5008195 ]
+    },
+    "properties": {
+    "State":"NE",
+    "City":"Nebraska"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.0230604,38.502032 ]
+    },
+    "properties": {
+    "State":"NV",
+    "City":"Nevada"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.5799231,44.0012306 ]
+    },
+    "properties": {
+    "State":"NH",
+    "City":"New Hampshire"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.7311156,40.1430058 ]
+    },
+    "properties": {
+    "State":"NJ",
+    "City":"New Jersey"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.0260685,34.1662325 ]
+    },
+    "properties": {
+    "State":"NM",
+    "City":"New Mexico"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.97968,40.7056258 ]
+    },
+    "properties": {
+    "State":"NY",
+    "City":"New York"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.8912675,35.2145629 ]
+    },
+    "properties": {
+    "State":"NC",
+    "City":"North Carolina"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -100.3022655,47.4678819 ]
+    },
+    "properties": {
+    "State":"ND",
+    "City":"North Dakota"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -82.6692525,40.1903624 ]
+    },
+    "properties": {
+    "State":"OH",
+    "City":"Ohio"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -98.7165585,35.3097654 ]
+    },
+    "properties": {
+    "State":"OK",
+    "City":"Oklahoma"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.5380993,44.1419049 ]
+    },
+    "properties": {
+    "State":"OR",
+    "City":"Oregon"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.6046984,40.9945928 ]
+    },
+    "properties": {
+    "State":"PA",
+    "City":"Pennsylvania"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.5064508,41.5827282 ]
+    },
+    "properties": {
+    "State":"RI",
+    "City":"Rhode Island"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.9470381,33.62505 ]
+    },
+    "properties": {
+    "State":"SC",
+    "City":"South Carolina"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -100.2471641,44.2126995 ]
+    },
+    "properties": {
+    "State":"SD",
+    "City":"South Dakota"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.9785989,35.830521 ]
+    },
+    "properties": {
+    "State":"TN",
+    "City":"Tennessee"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -100.0768425,31.1693363 ]
+    },
+    "properties": {
+    "State":"TX",
+    "City":"Texas"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -111.547028,39.4997605 ]
+    },
+    "properties": {
+    "State":"UT",
+    "City":"Utah"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -72.4477828,43.8717545 ]
+    },
+    "properties": {
+    "State":"VT",
+    "City":"Vermont"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.4587861,38.0033855 ]
+    },
+    "properties": {
+    "State":"VA",
+    "City":"Virginia"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.0145665,47.8993487 ]
+    },
+    "properties": {
+    "State":"WA",
+    "City":"Washington"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.1816905,38.9201705 ]
+    },
+    "properties": {
+    "State":"WV",
+    "City":"West Virginia"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.8267049,44.7862968 ]
+    },
+    "properties": {
+    "State":"WI",
+    "City":"Wisconsin"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -107.5545669,43.000325 ]
+    },
+    "properties": {
+    "State":"WY",
+    "City":"Wyoming"
+    }
+  }
+]
+}
