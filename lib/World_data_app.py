@@ -27,7 +27,9 @@ def query_continent():
         day = date_start_dt + datetime.timedelta(days=i)
         date_list.append(day.strftime('%Y-%m-%d'))
     date_list = tuple(date_list)
-    print(date_list)
+
+    if len(date_list) < 2:
+        date_list = (f"('{date_start_dt.strftime('%Y-%m-%d')}')")
 
     #create placeholders for continent data
     continent_cases = []
@@ -102,7 +104,9 @@ def query_Country():
         day = date_start_dt + datetime.timedelta(days=i)
         date_list.append(day.strftime('%Y-%m-%d'))
     date_list = tuple(date_list)
-    print(date_list)
+
+    if len(date_list) < 2:
+        date_list = f"('{date_start_dt.strftime('%Y-%m-%d')}')"
 
     #create placeholders for country data
     country_cases = []

@@ -33,7 +33,9 @@ def query_usa():
         day = date_start_dt + datetime.timedelta(days=i)
         date_list.append(day.strftime("%m/%d/%Y"))
     date_list = tuple(date_list)
-    print(date_list)
+
+    if len(date_list) < 2:
+        date_list = f"('{date_start_dt.strftime('%m/%d/%Y')}')"
 
     #run queries for data
     #total cases by day
