@@ -4,11 +4,16 @@
 
 ## Table of contents
 
-* [example](#)
-* [example](#)
-* [example](#)
-* [example](#)
-* [example](#)
+* [Coivd-19 Data](#covid-19-data)
+* [Data Sources](#data-sources)
+* [Technologies](#technologies)
+* [Extract](#extract)
+* [Transform](#transform)
+* [Load](#load)
+* [Visualizations](#visualizations)
+* [HTML](#html)
+* [Run Flask App](#run-flask)
+* [Contacts](#contacts)
 
 ![gif](https://media0.giphy.com/media/TjGV8ni2jC5pj6iY6T/giphy.gif?cid=ecf05e47y9n1wxob6r5xqw6jwu2oos5x0f569mhs87qbj2ne&rid=giphy.gif&ct=g)
 
@@ -58,7 +63,7 @@ Placeholder
 
 Placeholder
 
-## Contact
+## Contacts
 
 [Annette Heredia](https://github.com/AnnetteHeredia)
 
