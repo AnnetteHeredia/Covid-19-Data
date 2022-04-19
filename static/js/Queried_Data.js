@@ -23,7 +23,7 @@ function getCharts(jsonData){
     summary_table_div.append("table").attr("id","sum_table");
     summary_table = d3.select('#sum_table');
     header = summary_table.append("tr");
-    header.append("th").text("State: "+jsonData[0].state+"  ");
+    header.append("th").text("Location: "+jsonData[0].state+"  ");
     header.append("th").text("Start Date: "+dates[0]+"  ");
     header.append("th").text("End Date: "+dates[dates.length - 1]);
 
