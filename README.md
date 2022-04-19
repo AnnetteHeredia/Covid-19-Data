@@ -29,3 +29,24 @@ Objective: The objective was to present a more easily searchable Covid-19 data r
 * Plotly
 * Jupyter Notebook
 * SQLiteStudio
+
+# Extract
+
+Placeholder
+
+# Transform
+
+Placeholder
+
+# Load
+
+ Placeholder
+ 
+ # Deploy
+ 
+ Placeholder
+ 
+ # Visualizations
+ 
+ Placeholder
+ 
