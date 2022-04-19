@@ -50,3 +50,16 @@ Placeholder
  
  Placeholder
  
+## Contact
+
+[Annette Heredia](https://github.com/AnnetteHeredia)
+
+[Emanuel Villa](https://github.com/mannievilla)
+
+[Johnathan Fludd](https://github.com/JohnathanFludd)
+
+[Jordan Alonzo](https://github.com/jalonzoajordan)
+
+[Miguel Martinez](https://github.com/mmtz97)
+
+[Steven De Noia](https://github.com/Stencoss)
