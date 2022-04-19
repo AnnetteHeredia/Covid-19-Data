@@ -15,8 +15,8 @@ def query_usa():
     end_date = request.form['end_date']
 
     #get the parameters to run queries
-    date_start_dt = datetime.datetime.strptime(start_date, '%m/%d/%Y').date()
-    date_end_dt = datetime.datetime.strptime(end_date, '%m/%d/%Y').date()
+    date_start_dt = datetime.datetime.strptime(start_date, '%Y-%m-%d').date()
+    date_end_dt = datetime.datetime.strptime(end_date, '%Y-%m-%d').date()
     state_select = selected_state
 
     #create placeholders for data
@@ -88,7 +88,7 @@ def query_usa_range():
     end_date = request.form['end_date']
 
     #get the parameters to run queries
-    date_end_dt = datetime.datetime.strptime(end_date, '%m/%d/%Y').date()
+    date_end_dt = datetime.datetime.strptime(end_date, '%Y-%m-%d').date()
     date_format = date_end_dt.strftime('%m/%d/%Y')
 
     #create placeholders for data

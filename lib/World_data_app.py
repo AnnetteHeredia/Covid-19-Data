@@ -16,8 +16,8 @@ def query_continent():
     end_date = request.form['end_date_continent']
 
     #get the parameters to run queries
-    date_start_dt = datetime.datetime.strptime(start_date, '%m/%d/%Y').date()
-    date_end_dt = datetime.datetime.strptime(end_date, '%m/%d/%Y').date()
+    date_start_dt = datetime.datetime.strptime(start_date, '%Y-%m-%d').date()
+    date_end_dt = datetime.datetime.strptime(end_date, '%Y-%m-%d').date()
 
     #due to SQL storing dates as string literals, create a list of dates to search from the range
     date_list = []
@@ -112,8 +112,8 @@ def query_Country():
     end_date = request.form['end_date_country']
 
     #get the parameters to run queries
-    date_start_dt = datetime.datetime.strptime(start_date, '%m/%d/%Y').date()
-    date_end_dt = datetime.datetime.strptime(end_date, '%m/%d/%Y').date()
+    date_start_dt = datetime.datetime.strptime(start_date, '%Y-%m-%d').date()
+    date_end_dt = datetime.datetime.strptime(end_date, '%Y-%m-%d').date()
 
     #due to SQL storing dates as string literals, create a list of dates to search from the range
     date_list = []
@@ -190,12 +190,12 @@ def query_world_range():
     try:
         end_date = request.form['end_date_continent']
         #get the parameters to run queries
-        date_end_dt = datetime.datetime.strptime(end_date, '%m/%d/%Y').date()
+        date_end_dt = datetime.datetime.strptime(end_date, '%Y-%m-%d').date()
         date_format = date_end_dt.strftime('%Y-%m-%d')
     except:
         end_date = request.form['end_date_country']
         #get the parameters to run queries
-        date_end_dt = datetime.datetime.strptime(end_date, '%m/%d/%Y').date()
+        date_end_dt = datetime.datetime.strptime(end_date, '%Y-%m-%d').date()
         date_format = date_end_dt.strftime('%Y-%m-%d')
 
     #create placeholders for data
