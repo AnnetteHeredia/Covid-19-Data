@@ -36,7 +36,13 @@ def query_continent():
     continent_new = []
     continent_tot_deaths = []
     continent_new_death = []
+    continent_dates = []
     
+    #dates of all rows retrieved
+    continent_dates_query = engine.execute(f"SELECT date FROM world_data WHERE continent = '{continent_select}' AND date IN {date_list} ORDER BY date ASC").fetchall()
+    for continent in continent_dates_query:
+        continent_dates.append(continent[0])
+
     #total cases by day
     continent_cases_query = engine.execute(f"SELECT total_cases FROM world_data WHERE continent = '{continent_select}' AND date IN {date_list} ORDER BY date ASC").fetchall()
     for continent in continent_cases_query:
@@ -51,7 +57,6 @@ def query_continent():
     continent_totdeaths_query = engine.execute(f"SELECT total_deaths FROM world_data WHERE continent = '{continent_select}' AND date IN {date_list} ORDER BY date ASC").fetchall()
     for continent in continent_totdeaths_query:
         continent_tot_deaths.append(continent[0])
-    continent_tot_deaths
 
     #new continent deaths by day
     continent_newdeaths_query = engine.execute(f"SELECT new_deaths FROM world_data WHERE continent = '{continent_select}' AND date IN {date_list} ORDER BY date ASC").fetchall()
@@ -63,20 +68,34 @@ def query_continent():
     curr_date = date_start_dt - datetime.timedelta(days = 1)
     continent_output = []
     #match the day data into a dictionary
-    while i < len(continent_cases):
+    while i < len(date_list):
         #get the date
         curr_date = curr_date + datetime.timedelta(days = 1)
         str_date  = str(curr_date)
-        print(curr_date)
+        #get the list of indexes for the current date
+        curr_date_indexes = [x for x in range(len(continent_dates)) if continent_dates[x] == str_date]
+        #use these indexes to summarize all countries in the selected continent for that date
+        #total cases
+        total_cases_list =  [continent_cases[j] for j in curr_date_indexes if continent_cases[j] != '']
+        total_cases = sum(total_cases_list)
+        #new cases
+        total_newcases_list =  [continent_new[j] for j in curr_date_indexes if continent_new[j] != '']
+        new_cases = sum(total_newcases_list)
+        #total deaths
+        total_deaths_list =  [continent_tot_deaths[j] for j in curr_date_indexes if continent_tot_deaths[j] != '']
+        total_deaths = sum(total_deaths_list)
+        #new deaths
+        total_newdeaths_list =  [continent_new_death[j] for j in curr_date_indexes if continent_new_death[j] != '']
+        new_deaths = sum(total_newdeaths_list)
         #build the dictionary
         continent_data_dict = {
             'country' : continent_select,
             'state' : continent_select,
             'date': str_date,
-            'total_cases': continent_cases[i],
-            'new_cases': continent_new[i],
-            'total_deaths': continent_tot_deaths[i],
-            'new_deaths': continent_new_death[i]
+            'total_cases': total_cases,
+            'new_cases': new_cases,
+            'total_deaths': total_deaths,
+            'new_deaths': new_deaths
         }
         #append to file
         continent_output.append(continent_data_dict)
@@ -163,8 +182,8 @@ def query_Country():
         i=i+1
     
     #jsonify and send out country data
-    #json_string = json.dumps(country_output)
-    return country_output
+    json_string = json.dumps(country_output)
+    return json_string
 
 def query_world_range():
     #get primary data from webpage
