@@ -117,9 +117,9 @@ function buildMap(jsonData){
     state = jsonData.map(item => item.state);
     totCases = jsonData.map(item => item.total_cases);
     totDeaths = jsonData.map(item => item.total_deaths);
-    country = jsonData.map(item => item.state);
+    country = jsonData.map(item => item.country);
 
-    if (country[0] == 'USA'){
+    if (country[0] === 'USA'){
 
         //Initialize the map
         var myMap = L.map("map", {
