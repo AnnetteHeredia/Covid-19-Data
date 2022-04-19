@@ -84,8 +84,8 @@
                 <form action={{url_for('query_Continent')}} method="POST">
                   <h2>Search by Continent</h2>
                   <select id="Continents_Drop_Down_tag" name="selected_continent"></select></br>
-                  Start Date: <input name="start_date_continent"></text></br>
-                  End Date: <input name="end_date_continent"></text></br>
+                  Start Date: <input type="date" name="start_date_continent"></text></br>
+                  End Date: <input type="date" name="end_date_continent"></text></br>
                   <button type="submit" href="/query_Continent">GET RESULTS!</button>
                 </form>
               </div>
@@ -93,8 +93,8 @@
                 <form action={{url_for('query_Country')}} method="POST">
                   <h2>Search by Country</h2>
                   <select id="Country_Drop_Down_tag" name="selected_country"></select></br>
-                  Start Date: <input name="start_date_country"></text></br>
-                  End Date: <input name="end_date_country"></text></br>
+                  Start Date: <input type="date" name="start_date_country"></text></br>
+                  End Date: <input type="date" name="end_date_country"></text></br>
                   <button type="submit" href="/query_Country">GET RESULTS!</button>
                 </form>
               </div>
@@ -116,8 +116,8 @@
               <div>
                 <form action={{url_for('query_USA')}} method="POST">
                   State: <select id="State_Drop_Down_tag" name="selected_state"></select></br>
-                  Start Date: <input name="start_date"></text></br>
-                  End Date: <input name="end_date"></text></br>
+                  Start Date: <input  type="date" name="start_date"></text></br>
+                  End Date: <input  type="date" name="end_date"></text></br>
                   <button type="submit" href="/query_USA">GET RESULTS!</button>
                 </form>
               </div>
