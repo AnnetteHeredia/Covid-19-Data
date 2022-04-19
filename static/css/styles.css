@@ -68,7 +68,7 @@ width: 200px;
 
 .box{
 
-background-color: lightblue;
+background-color: rgb(255, 255, 255);
 
 }
 
@@ -92,7 +92,7 @@ th, td {
   }
 
   th {
-    background-color: rgb(81, 175, 160);
+    background-color: rgb(255, 255, 255);
     color: white;
   }
 
