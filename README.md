@@ -11,7 +11,6 @@
 * [Transform](#transform)
 * [Load](#load)
 * [Visualizations](#visualizations)
-* [HTML](#html)
 * [Run Flask App](#run-flask)
 * [Contacts](#contacts)
 
@@ -45,17 +44,22 @@ Objective: The objective was to present a more easily searchable Covid-19 data r
 
 # Load
 
-
+* Build Line Charts
+* Build Leaflet maps, using javascript to use JSON API call
+* Build Flask app and connectivity
  
 # Deploy
  
-Placeholder
- 
+* Using VSCode, we made an app to call our data queries from the SQLite database but call it using JSON call
+* Data called, able to create visualizations for our build webpage viw CSS, Bootstrap, HTML, Javascript, Python
+
 # Visualizations
  
-Placeholder
+<h2>Main Page
 
 ![before?](static/Images/mainpage.PNG)
+
+Data Pulled in Main Page
 
 ![after?](static/Images/covid19html.png)
 
@@ -66,15 +70,11 @@ To Deploy the Flask App, please follow the steps :
 
 * step 2: Confirm that jupyter notebook is up and running with the env where you have the python libraries mentioned in the notebook installed
 
-* step 3: 
+* step 3: Confirm that you have sqlitestudio app up and running in your machine
 
-* step 4: 
+* step 4: Connect the database using the database called 'COVID_Data.db'
 
-* step 5: 
-
-* step 6: 
-
-* step 7: Execute command python app.py and launch the server using URL: http://127.0.0.1:5000/
+* step 5: Execute command python app.py and launch the server using URL: http://127.0.0.1:5000/
 
 ## Contacts
 
