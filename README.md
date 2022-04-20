@@ -52,12 +52,10 @@ Placeholder
 # Visualizations
  
 Placeholder
- 
-## HTML
- 
-Placeholder
 
-![home?](images/covid19html.PNG)
+![before?](static/Images/mainpage.PNG)
+
+![after?](static/Images/covid19html.png)
 
 ## Run Flask
 
