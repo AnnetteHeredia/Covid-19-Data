@@ -35,15 +35,17 @@ Objective: The objective was to present a more easily searchable Covid-19 data r
 
 # Extract
 
-Placeholder
+* Find data sources via world data, united states (csvs)
+* Jupyter Notebook to setup a logic, view, clean, and organize data with Pandas/Python
 
 # Transform
 
-Placeholder
+* Transfer from CSV to SQLite
+* We combined both US and World 
 
 # Load
 
-Placeholder
+
  
 # Deploy
  
@@ -59,7 +61,20 @@ Placeholder
 
 ## Run Flask
 
-Placeholder
+To Deploy the Flask App, please follow the steps :
+* step 1: Git clone the repository into your local
+
+* step 2: Confirm that jupyter notebook is up and running with the env where you have the python libraries mentioned in the notebook installed
+
+* step 3: 
+
+* step 4: 
+
+* step 5: 
+
+* step 6: 
+
+* step 7: Execute command python app.py and launch the server using URL: http://127.0.0.1:5000/
 
 ## Contacts
 
